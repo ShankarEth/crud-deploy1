@@ -6,7 +6,7 @@ function StudentTable() {
     const [students, setStudents] = useState([]);
 
     useEffect(()=>{
-        axios.get('http://localhost:5200/student')
+        axios.get('https://crud-deploy1-backend.onrender.com/student')
         .then(({data})=>{
             setStudents(data);
         })

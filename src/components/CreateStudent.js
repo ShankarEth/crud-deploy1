@@ -11,7 +11,7 @@ const CreateStudent = (props) =>
     const handleSubmit = () => {
         alert("Creating record");
         const data = {name:formValues[0],email:formValues[1],rollno:formValues[2]}
-        axios.post("http://localhost:5200/student/create-student",data)
+        axios.post("https://crud-deploy1-backend.onrender.com/student/create-student",data)
         .then(res=>{
             if(res.status === 200)
                 alert('student data created');

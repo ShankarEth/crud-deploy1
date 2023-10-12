@@ -17,7 +17,7 @@ function EditStudent(props) {
 
   const handleSubmit = () => {
     alert("Editing...")
-    axios.put("http://localhost:5200/student/update-student/:" + id, {name:formDetails[0],email:formDetails[1],rollno:formDetails[2]})
+    axios.put("https://crud-deploy1-backend.onrender.com/student/update-student/:" + id, {name:formDetails[0],email:formDetails[1],rollno:formDetails[2]})
       .then((res) => {
         if (res.status === 200) {
           alert("Student successfully updated");
@@ -31,7 +31,7 @@ function EditStudent(props) {
   };
 
   useEffect(() => {
-    axios.get("http://localhost:5200/student/update-student/" + id)
+    axios.get("https://crud-deploy1-backend.onrender.com/student/update-student/" + id)
       .then((res) => {
         const { name, email, rollno } = res.data;
         setFormValues({ name, email, rollno });

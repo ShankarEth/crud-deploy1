@@ -3,7 +3,7 @@ function StudentTableRow(props) {
     const {_id, name, email, rollno} = props.obj;
     const deleteStudent = () => {
         alert("Deleting student record..");
-        axios.delete('http://localhost:5200/student/delete-student/'+ _id)
+        axios.delete('https://crud-deploy1-backend.onrender.com/student/delete-student/'+ _id)
         .then((res)=>{
             if (res.status === 200) {
                 alert("Student successfully deleted");
