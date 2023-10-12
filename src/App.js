@@ -1,12 +1,10 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header1 from './components/Header1';
-import Main from './components/Main';
+import Signin from './components/Signin';
 function App() {
   return (
     <div className="App">
-      <Header1 />
-      <Main />
+      <Signin />
     </div>
   );
 }
