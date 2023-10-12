@@ -1,9 +1,5 @@
 
 function Header1() {
-    const handleClick = () => {
-        localStorage.clear();
-        window.location.reload();
-    }
     return (
         <div className='container'>
             <div className="navbar bg-dark">
@@ -17,9 +13,6 @@ function Header1() {
                     </div>
                     <div className='nav-item'>
                         <h4><a href="/student-list" className="nav-link">Student List</a></h4>
-                    </div>
-                    <div>
-                        <button onClick={handleClick} class="mt-1 me-2 btn btn-danger">Log out</button>
                     </div>
                 </div>
 

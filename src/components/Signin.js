@@ -2,8 +2,7 @@
 import { auth, provider } from "./config";
 import { signInWithPopup } from "firebase/auth";
 import { useEffect, useState } from "react";
-import Header1 from "./Header1";
-import Main from "./Main";
+import App from "../../../credentials/src/App";
 function Signin() {
     const [value, setValue] = useState("");
     const handleClick = () => {
@@ -18,10 +17,8 @@ function Signin() {
     })
     return (
         <div>
-            {value ? <div><Header1 /><Main /></div> :
-               <div class="App-header"> 
-                    <button class="btn btn-danger" onClick={handleClick}>Google Signup</button> 
-               </div>
+            {value ? <App /> :
+                <button onClick={handleClick}>Sign in with Google</button>
             }
         </div>
     );
